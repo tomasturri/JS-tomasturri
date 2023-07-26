@@ -130,8 +130,8 @@ if (userRoll === '1') {
 
 function addProduct() {
   while (true) { // Bucle infinito para agregar productos hasta que el usuario decida salir
-    nombreProducto = prompt("Agrega el nombre del producto (o escribe 'Salir' para terminar):").toLowerCase();
-    if (nombreProducto === 'Salir') {
+    nombreProducto = prompt("Agrega el nombre del producto (o escribe 'salir' para terminar):").toLowerCase();
+    if (nombreProducto === 'salir') {
       break; // Si el usuario ingresa 'salir', se sale del bucle
     }
     precioProducto = prompt("Agrega el precio del producto:").toLowerCase();
@@ -159,7 +159,7 @@ function printCalculation(nombreProducto, precioProducto, cantidadProducto) {
   alert(`
     Producto: ${nombreProducto}
     Cantidad: ${cantidadProducto} unidades
-    Uso de aplicación (10%) = $${recargaTotal.toFixed(2)}
+    Uso de aplicación (5%) = $${recargaTotal.toFixed(2)}
     Total del producto = $${compraTotal.toFixed(2)}
   `);
 }
