@@ -1,6 +1,6 @@
 alert(`
 Hola! \n
-Bienvenidos a Bartolo Bar!
+Bienvenido a Bartolo Bar!
         `);
 
 const nombre = prompt('Por favor, introduzca su nombre aqui:');
@@ -49,7 +49,7 @@ const acceptContract = () => {
     ? 'Al encargar su pedido: se realiza una recarga del 10% a su pedido por el uso de la aplicacion'
     : 'Para reservar su mesa: las reservas se mantienen hasta las 22hs'}
     Estas de acuerdo con los terminos y continuar a crear su perfil?
-        1. si
+        1. Si
         2. No`).toLowerCase();
   let respuesta;
   switch (acceptTerm) {
@@ -69,13 +69,14 @@ const acceptContract = () => {
 
 if (acceptContract()) {
   alert(`
-Genial!
-ahora vamos a crear tu perfil`);
+    Genial!
+    ahora vamos a crear tu perfil`);
   createProfile();
 } else {
   alert(`
-    ¡¡Qué lástima!!
-    Ya casi terminabamos. Sin embargo puedes regresar cuando lo desees`);
+    Qué lástima, Ya casi terminabamos.
+
+    Sin embargo puedes regresar cuando lo desees.`);
 }
 
 function createProfile() {
@@ -86,7 +87,8 @@ function createProfile() {
     contraseña = prompt('Ingrese su contraseña:').toLowerCase();
 
     alert(`
-    Excelente, su perfil a sido completado :
+    Su perfil ha sido creado con exito!
+
     Nombre Completo: ${nombreCompleto}
     Numero telefonico: ${numeroTelefono}
     Email: ${email}`);
@@ -99,7 +101,8 @@ function createProfile() {
     contraseña = prompt('Ingrese su contraseña:').toLowerCase();
 
     alert(`
-    Excelente, su perfil a sido completado :
+    Su perfil ha sido creado con exito!
+
     Nombre Completo: ${nombreCompleto}
     Numero telefonico: ${numeroTelefono}
     Email: ${email}`);
@@ -110,7 +113,7 @@ function createProfile() {
 }
 
 
-let totalCompra = 0; 
+let totalCompra = 0;
 
 if (userRoll === '1') {
   let añadirProducto = prompt('Quieres añadir un producto \n 1. Si \n 2. No').toLowerCase();
@@ -127,21 +130,24 @@ if (userRoll === '1') {
 
 function addProduct() {
   while (true) { // Bucle infinito para agregar productos hasta que el usuario decida salir
-    nombreProducto = prompt("agrega el nombre del producto (o escribe 'salir' para terminar):").toLowerCase();
-    if (nombreProducto === 'salir') {
+    nombreProducto = prompt("Agrega el nombre del producto (o escribe 'Salir' para terminar):").toLowerCase();
+    if (nombreProducto === 'Salir') {
       break; // Si el usuario ingresa 'salir', se sale del bucle
     }
-    precioProducto = prompt("agrega el precio del producto:").toLowerCase();
-    cantidadProducto = prompt("agrega la cantidad :").toLowerCase();
+    precioProducto = prompt("Agrega el precio del producto:").toLowerCase();
+    cantidadProducto = prompt("Agrega la cantidad :").toLowerCase();
     if (isNaN(precioProducto) || isNaN(cantidadProducto)) {
-      alert('el precio y la cantidad deben ser números');
+      alert('El precio y la cantidad deben ser números');
       continue; // Si el usuario ingresó datos no numéricos, se vuelve a pedir los datos del producto
     }
     printCalculation(nombreProducto, precioProducto, cantidadProducto);
   }
-  alert(`Muchas Gracias por su compra!
-  El total de la compra es: $${totalCompra}
-  Su pedido estara listo en aproximadamente 45 minutos.
+  alert(`
+    Muchas Gracias por su compra!
+
+    El total de la compra es: $${totalCompra}
+
+    Su pedido estara listo en aproximadamente 45 minutos.
   `);
 }
 
