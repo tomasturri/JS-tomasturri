@@ -46,8 +46,8 @@ const acceptContract = () => {
     
 
     ${setRoll(nombre) === '1'
-    ? 'Al encargar su pedido: se realiza una recarga del 10% a su pedido por el uso de la aplicacion'
-    : 'Para reservar su mesa: las reservas se mantienen hasta las 22hs'}
+    ? 'Al encargar su pedido se realizara una recarga del 5% por el uso de la aplicacion'
+    : 'Recordar que las reservas se mantienen hasta las 22hs'}
     Estas de acuerdo con los terminos y continuar a crear su perfil?
         1. Si
         2. No`).toLowerCase();
@@ -152,7 +152,7 @@ function addProduct() {
 }
 
 function printCalculation(nombreProducto, precioProducto, cantidadProducto) {
-  const recargaTotal = (precioProducto * cantidadProducto) * 0.1;
+  const recargaTotal = (precioProducto * cantidadProducto) * 0.05;
   const compraTotal = (precioProducto * cantidadProducto) + recargaTotal;
   totalCompra += compraTotal; // Se actualiza el total de la compra
 
