@@ -70,7 +70,7 @@ const acceptContract = () => {
 if (acceptContract()) {
   alert(`
     Genial!
-    ahora vamos a crear tu perfil`);
+    Ahora vamos a crear tu perfil`);
   createProfile();
 } else {
   alert(`
