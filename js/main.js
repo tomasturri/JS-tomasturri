@@ -1,9 +1,9 @@
 alert(`
 Hola! \n
 Bienvenido a Bartolo Bar!
-        `);
+`);
 
-const nombre = prompt('Por favor, introduzca su nombre aqui:');
+const nombre = prompt('Por favor, introduzca su nombre aquí:');
 
 let userRoll = '';
 let nombreCompleto = '';
@@ -11,29 +11,30 @@ let numeroTelefono = '';
 let email = '';
 let contraseña = '';
 
-let nombreProducto = '';
-let precioProducto = '';
-let cantidadProducto = '';
+const productos = [
+  { nombre: 'Pizza', precio: 2000, cantidad: 20 },
+  { nombre: 'Hamburguesa', precio: 1500, cantidad: 20 },
+  { nombre: 'Empanadas', precio: 500, cantidad: 36 },
+];
 
 const setRoll = function (nombre = '') {
   const roll = prompt(`
 Hola ${nombre} \n
 Estamos encantados de que nos elijas.
 
-Que desear realizar?. Elija la opcion: \n
+¿Qué deseas realizar? Elija la opción: \n
     1. Encargar pedido
     2. Reservar mesa`);
 
   switch (roll) {
     case '1':
-      alert('Exelente, ahora vamos tomar su pedido');
+      alert('¡Excelente, ahora vamos a tomar su pedido!');
       break;
     case '2':
-      alert('Excelente, ahora vamos a reservar su mesa');
+      alert('¡Excelente, ahora vamos a reservar su mesa!');
       break;
-
     default:
-      alert('Por favor, seleccione una opcion valida');
+      alert('Por favor, seleccione una opción válida.');
       setRoll(nombre);
       break;
   }
@@ -46,9 +47,9 @@ const acceptContract = () => {
     
 
     ${setRoll(nombre) === '1'
-    ? 'Al encargar su pedido se realizara una recarga del 5% por el uso de la aplicacion'
-    : 'Recordar que las reservas se mantienen hasta las 22hs'}
-    Estas de acuerdo con los terminos y continuar a crear su perfil?
+    ? 'Al encargar su pedido se realizará una recarga del 5% por el uso de la aplicación.'
+    : 'Recuerde que las reservas se mantienen hasta las 22hs.'}
+    ¿Está de acuerdo con los términos y continuar a crear su perfil?
         1. Si
         2. No`).toLowerCase();
   let respuesta;
@@ -60,7 +61,7 @@ const acceptContract = () => {
       respuesta = false;
       break;
     default:
-      alert('Por favor, seleccione una opcion valida (1 o 2)');
+      alert('Por favor, seleccione una opción válida (1 o 2).');
       acceptContract();
       break;
   }
@@ -69,100 +70,122 @@ const acceptContract = () => {
 
 if (acceptContract()) {
   alert(`
-    Genial!
-    Ahora vamos a crear tu perfil`);
+    ¡Genial!
+    Ahora vamos a crear tu perfil.`);
   createProfile();
 } else {
   alert(`
-    Qué lástima, Ya casi terminabamos.
+    ¡Qué lástima! Ya casi terminábamos.
 
-    Sin embargo puedes regresar cuando lo desees.`);
+    Sin embargo, puedes regresar cuando lo desees.`);
 }
 
 function createProfile() {
+  nombreCompleto = prompt('Ingrese su nombre completo:');
+  numeroTelefono = prompt('Ingrese su número de teléfono:');
+  email = prompt('Ingrese su correo electrónico:');
+  contraseña = prompt('Ingrese su contraseña:');
+
+  alert(`
+    ¡Su perfil ha sido creado con éxito!
+
+    Nombre Completo: ${nombreCompleto}
+    Número telefónico: ${numeroTelefono}
+    Correo electrónico: ${email}`);
+
   if (userRoll === '1') {
-    nombreCompleto = prompt('Ingrese su nombre completo:').toLowerCase();
-    numeroTelefono = prompt('Ingrese su numero de telefono:').toLowerCase();
-    email = prompt('Ingrese su email:').toLowerCase();
-    contraseña = prompt('Ingrese su contraseña:').toLowerCase();
-
-    alert(`
-    Su perfil ha sido creado con exito!
-
-    Nombre Completo: ${nombreCompleto}
-    Numero telefonico: ${numeroTelefono}
-    Email: ${email}`);
-  }
-
-  if (userRoll === '2') {
-    nombreCompleto = prompt('Ingrese su nombre completo:').toLowerCase();
-    numeroTelefono = prompt('Ingrese su numero de telefono:').toLowerCase();
-    email = prompt('Ingrese su email:').toLowerCase();
-    contraseña = prompt('Ingrese su contraseña:').toLowerCase();
-
-    alert(`
-    Su perfil ha sido creado con exito!
-
-    Nombre Completo: ${nombreCompleto}
-    Numero telefonico: ${numeroTelefono}
-    Email: ${email}`);
-
+    showProductOptions(); // Mostrar opciones de productos
+  } else if (userRoll === '2') {
     const personasReserva = prompt('¿Para cuántas personas es la reserva?');
-    alert(`Se ha realizado la reserva de ${personasReserva} personas, ¡los esperamos!`);
+    alert(`Se ha realizado la reserva de ${personasReserva} personas. ¡Los esperamos!`);
   }
 }
 
+function showProductOptions() {
+  const productsAdded = [];
 
-let totalCompra = 0;
+  while (true) {
+    mostrarOpcionesProductos(); // Mostrar las opciones de productos disponibles
+    const opcion = prompt("Elija su producto:\n1. Pizza\n2. Empanadas\n3. Hamburguesa\nEscriba 'salir' para terminar:").toLowerCase();
 
-if (userRoll === '1') {
-  let añadirProducto = prompt('Quieres añadir un producto \n 1. Si \n 2. No').toLowerCase();
-  while (añadirProducto !== '1' && añadirProducto !== '2') {
-    alert("Agrega una respuesta valida");
-    añadirProducto = prompt('Quieres añadir un producto \n 1. Si \n 2. No').toLowerCase();
-  }
-  if (añadirProducto === '1') {
-    addProduct();
-  } else {
-    alert('Puedes volver cuando quieras');
-  }
-}
-
-function addProduct() {
-  while (true) { // Bucle infinito para agregar productos hasta que el usuario decida salir
-    nombreProducto = prompt("Agrega el nombre del producto (o escribe 'salir' para terminar):").toLowerCase();
-    if (nombreProducto === 'salir') {
-      break; // Si el usuario ingresa 'salir', se sale del bucle
+    if (opcion === 'salir') {
+      break;
     }
-    precioProducto = prompt("Agrega el precio del producto:").toLowerCase();
-    cantidadProducto = prompt("Agrega la cantidad :").toLowerCase();
-    if (isNaN(precioProducto) || isNaN(cantidadProducto)) {
-      alert('El precio y la cantidad deben ser números');
-      continue; // Si el usuario ingresó datos no numéricos, se vuelve a pedir los datos del producto
+
+    const opcionNumerica = parseInt(opcion);
+    if (opcionNumerica >= 1 && opcionNumerica <= 3) {
+      const nombreProducto = obtenerNombreProducto(opcionNumerica.toString());
+      const productoSeleccionado = productos.find(prod => prod.nombre === nombreProducto);
+
+      if (productoSeleccionado) {
+        const cantidadProducto = parseInt(prompt(`Agrega la cantidad de ${productoSeleccionado.nombre}:`));
+
+        if (isNaN(cantidadProducto) || cantidadProducto <= 0) {
+          alert('La cantidad debe ser un número positivo.');
+          continue;
+        }
+
+        if (cantidadProducto > productoSeleccionado.cantidad) {
+          alert('No hay suficiente cantidad disponible.');
+          continue;
+        }
+
+        productsAdded.push({ nombre: productoSeleccionado.nombre, precio: productoSeleccionado.precio, cantidad: cantidadProducto });
+        actualizarCantidadProducto(productoSeleccionado.nombre, cantidadProducto);
+
+        alert(`¡${cantidadProducto} ${productoSeleccionado.nombre}(s) agregado(s) a su pedido!`);
+      } else {
+        alert('Opción inválida. Por favor, elija una opción válida.');
+      }
+    } else {
+      alert('Opción inválida. Por favor, elija una opción válida.');
     }
-    printCalculation(nombreProducto, precioProducto, cantidadProducto);
   }
-  alert(`
-    Muchas Gracias por su compra!
 
-    El total de la compra es: $${totalCompra}
-
-    Su pedido estara listo en aproximadamente 45 minutos.
-  `);
+  showFinalOrder(productsAdded);
 }
 
-function printCalculation(nombreProducto, precioProducto, cantidadProducto) {
-  const recargaTotal = (precioProducto * cantidadProducto) * 0.05;
-  const compraTotal = (precioProducto * cantidadProducto) + recargaTotal;
-  totalCompra += compraTotal; // Se actualiza el total de la compra
-
-  alert(`
-    Producto: ${nombreProducto}
-    Cantidad: ${cantidadProducto} unidades
-    Uso de aplicación (5%) = $${recargaTotal.toFixed(2)}
-    Total del producto = $${compraTotal.toFixed(2)}
-  `);
+function mostrarOpcionesProductos() {
+  console.log('Opciones de productos disponibles:');
+  console.log('1. Pizza');
+  console.log('2. Empanadas');
+  console.log('3. Hamburguesa');
 }
 
+function obtenerNombreProducto(opcion) {
+  switch (opcion) {
+    case '1':
+      return 'Pizza';
+    case '2':
+      return 'Empanadas';
+    case '3':
+      return 'Hamburguesa';
+    default:
+      return '';
+  }
+}
 
+function actualizarCantidadProducto(nombreProducto, cantidad) {
+  const producto = productos.find(prod => prod.nombre.toLowerCase() === nombreProducto.toLowerCase());
+  if (producto) {
+    producto.cantidad -= cantidad;
+  }
+}
+
+function showFinalOrder(productsAdded) {
+  alert('Resumen de la compra:');
+  let totalCompra = 0;
+
+  for (const product of productsAdded) {
+    const subtotal = product.precio * product.cantidad;
+    const recargo = subtotal * 0.05; // 5% de recargo
+    const totalProducto = subtotal + recargo;
+
+    totalCompra += totalProducto;
+
+    alert(`${product.cantidad} ${product.nombre}(s) - Subtotal: $${subtotal.toFixed(2)} (+ 5% de recargo: $${recargo.toFixed(2)}) - Total: $${totalProducto.toFixed(2)}`);
+  }
+
+  alert(`Total de la compra: $${totalCompra.toFixed(2)}\nGracias por su compra! Su pedido estará listo en aproximadamente 45 minutos.`);
+}
 
