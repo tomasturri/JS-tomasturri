@@ -7,26 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bartolo Bar: Papas, pizzas y cocteles deliciosos en un ambiente acogedor en Coderhouse. Disfruta de una experiencia única con nuestra variada oferta.">
     <meta name="keywords" content="bar, tragos, cocteles, pizzas, papas fritas, bebidas, musica, gastronomía">
-
-    <meta property="og:title" content=Inicio-BartoloBar>
-    <meta property="og:site_name" content=BartoloBar>
-    <meta property="og:url" content=>
-    <meta property="og:description" content=BartoloBar: Papas, pizzas y cocteles deliciosos en un ambiente acogedor en Coderhouse. Disfruta de una experiencia única con nuestra variada oferta.>
-    <meta property="og:type" content=restaurant.menu>
-    <meta property="og:image" content=>
-
-    
+    <meta property="og:title" content="Inicio-BartoloBar">
+    <meta property="og:site_name" content="BartoloBar">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="BartoloBar: Papas, pizzas y cocteles deliciosos en un ambiente acogedor en Coderhouse. Disfruta de una experiencia única con nuestra variada oferta.">
+    <meta property="og:type" content="restaurant.menu">
+    <meta property="og:image" content="">
     <title>Inicio-BartoloBar</title>
     <link rel="shortcut icon" href="./assets/img/bar.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header class="header-nav">
         <div class="header-titulo">
-            <a href ="index.html">Bartolo BAR
+            <a href="index.html">Bartolo BAR
                 <img src="./assets/img/log actualizado.jpg" alt="logobar">
             </a>
         </div>
@@ -40,39 +37,93 @@
                 </ul>
             </nav>
         </div>
-
     </header>
 
-<main>
-    <section class="section-principal">
-            <div >
-                <h2>bebidas</h2>
-                <img src="./assets/img/bebida.jpg" alt="imagenbebidas">
-            </div>
-            <div>
-                <h2>cocteles</h2>
-                <img src="./assets/img/coctelinicio.jpg" alt="imagencocteles">
-            </div>
-            <div>
-                <h2>nuestras papas</h2>
-                <img src="./assets/img/papas.jpg" alt="imagenpapas">
-            </div>
-            <div>
-                <h2>pizzas</h2>
-                <img src="./assets/img/pizzainicio.jpg" alt="imagenpizzas">
-            </div>
-    </section>
-</main>
+    <main>
+        <h1>Menú de Comida</h1>
+        <ul id="menu">
+            <li>
+                <h2>Hamburguesa</h2>
+                <p>Precio: $1500</p>
+                <select id="cantidadHamburguesa">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> 
+                </select>
+                <button class="add-to-cart" data-name="Hamburguesa" data-price="1500">Agregar al Carrito</button>
+            </li>
+            <li>
+                <h2>Pizza</h2>
+                <p>Precio: $2000</p>
+                <select id="cantidadPizza">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> 
+                </select>
+                <button class="add-to-cart" data-name="Pizza" data-price="2000">Agregar al Carrito</button>
+            </li>
+            <li>
+                <h2>Tacos</h2>
+                <p>Precio: $750</p>
+                <select id="cantidadTacos">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> 
+                </select>
+                <button class="add-to-cart" data-name="Tacos" data-price="750">Agregar al Carrito</button>
+            </li>
+            <li>
+                <h2>Sushi</h2>
+                <p>Precio: $1000</p>
+                <select id="cantidadSushi">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> 
+                </select>
+                <button class="add-to-cart" data-name="Sushi" data-price="1000">Agregar al Carrito</button>
+            </li>
+            <li>
+                <h2>Ensalada</h2>
+                <p>Precio: $500</p>
+                <select id="cantidadEnsalada">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>    
+                </select>
+                <button class="add-to-cart" data-name="Ensalada" data-price="500">Agregar al Carrito</button>
+            </li>
+        </ul>
 
+        <h1>Carrito de Compras</h1>
+        <div id="carrito" class="carrito-container">
+            <!-- Aquí se mostrarán los productos en el carrito -->
+        </div>
+        <button id="mostrarCarrito">Mostrar Carrito</button>
+    </main>
 
-<footer class="pie-de-pagina">
-    <div>
-        <p>Estrada 1131 Concepcion del Uruguay,Entre rios</p>
-        <p>Bartolobar@gmail.com</p>
-        <p>03442-123456</p>
-    </div>
-</footer>
+    <footer class="pie-de-pagina">
+        <div>
+            <p>Estrada 1131 Concepcion del Uruguay, Entre Rios</p>
+            <p>Bartolobar@gmail.com</p>
+            <p>03442-123456</p>
+        </div>
+    </footer>
 
-  <script src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
