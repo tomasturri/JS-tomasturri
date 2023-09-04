@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -7,88 +6,151 @@
 }
 
 body {
-    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: black;
 }
 
-header {
+/* Estilo para el encabezado */
+.header-nav {
     width: 100%;
     height: 150px;
     background-color: black;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.header-titulo {
-    font-size: 50px;
+.header-titulo a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+
+.header-titulo img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 }
 
 .navbar {
-    display: flex;
     list-style: none;
-    justify-content: center;
-    gap: 10px;
+    display: flex;
+    gap: 20px;
 }
 
-.section-principal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-    height: auto;
-    background-image: url(../assets/img/inicio.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-h2 {
+.navbar a {
+    text-decoration: none;
     color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* Estilo para el contenido principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
     font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+    color: #007bff;
 }
 
-.section-bebidas {
-    width: 100%;
-    height: 700px;
-    background-image: url(../assets/img/bebida.jpg);
-    background-position: center;
-    background-size: cover;
+#menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.section-cocteles {
-    width: 100%;
-    height: 700px;
-    background-image: url(../assets/img/coctelfondo.jpg);
-    background-position: center;
-    background-size: cover;
+#menu li {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.section-papas {
-    width: 100%;
-    height: 700px;
-    background-image: url(../assets/img/papas.jpg);
-    background-position: center;
-    background-size: cover;
+#menu h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.section-pizzas {
-    width: 100%;
-    height: 700px;
-    background-image: url(../assets/img/pizza.jpg);
-    background-position: center;
-    background-size: cover;
+#menu p {
+    font-size: 18px;
+    color: #333;
 }
 
-.lista-precios {
+.add-to-cart {
+    background-color: #007bff;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el carrito de compras */
+#carrito {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    border-top: 1px solid #ccc;
+}
+
+#carrito li {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#carrito button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#carrito button:hover {
+    background-color: #ff2400;
+}
+
+/* Estilo para el total del carrito */
+#total {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo para el pie de página */
 .pie-de-pagina {
     width: 100%;
     height: 150px;
@@ -96,39 +158,115 @@ h2 {
     background-color: black;
     color: white;
     font-family: 'Bebas Neue', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Media */
 
+
+
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para los encabezados */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo para la lista del menú */
+#menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#menu li {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#menu button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el carrito de compras */
+.carrito-container {
+    display: none;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el total del carrito */
+#total {
+    font-weight: bold;
+}
+
+/* Estilo para mostrar/ocultar el carrito */
+.mostrar-carrito {
+    display: block;
+}
+
+
+.pie-de-pagina p {
+    margin-bottom: 10px;
+}
+
+.pie-de-pagina a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.pie-de-pagina a:hover {
+    color: #007bff;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .header-titulo {
+    h1 {
         font-size: 30px;
     }
 
-    .section-principal {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+    #menu li {
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 425px) {
-    .header-titulo {
-        font-size: 30px;
-    }
-
-    .section-principal {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+    #menu li {
+        width: 100%;
     }
 }
 
-@media (max-width: 375px) {
-    .header-titulo {
-        font-size: 30px;
-    }
-
-    .section-principal {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-    }
-}
