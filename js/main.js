@@ -1,5 +1,10 @@
-// Definimos un objeto para almacenar los productos en el carrito
+// Recuperar el carrito de localStorage al cargar la página
+const carritoStorage = localStorage.getItem('carrito');
 let carrito = {};
+
+if (carritoStorage) {
+    carrito = JSON.parse(carritoStorage);
+}
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombre, precio, cantidad) {
@@ -8,6 +13,10 @@ function agregarAlCarrito(nombre, precio, cantidad) {
     } else {
         carrito[nombre] = { precio, cantidad };
     }
+
+    // Actualizar el carrito en localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito();
 }
 
 // Función para actualizar la vista del carrito en el HTML
@@ -46,7 +55,6 @@ botonesAgregar.forEach((boton) => {
         const cantidad = parseInt(cantidadElement.value, 10);
         if (cantidad > 0) {
             agregarAlCarrito(nombre, precio, cantidad);
-            actualizarCarrito();
         }
     });
 });
@@ -60,4 +68,3 @@ mostrarCarritoButton.addEventListener('click', () => {
 
 // Llama a actualizarCarrito para mostrar el carrito vacío al cargar la página
 actualizarCarrito();
-
