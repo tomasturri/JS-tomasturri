@@ -1,0 +1,91 @@
+[
+    {
+        "id": "cocktail-01",
+        "titulo": "cocktail 01",
+        "imagen": "./img/cocteles/01.jpg",
+        "categoria": {
+            "nombre": "Cocktail",
+            "id": "Cocktail"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cocktail-02",
+        "titulo": "Cocktail 02",
+        "imagen": "./img/cocteles/02.jpg",
+        "categoria": {
+            "nombre": "Cocktail",
+            "id": "Cocktail"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Cocktail-03",
+        "titulo": "Cocktail 03",
+        "imagen": "./img/cocteles/03.jpg",
+        "categoria": {
+            "nombre": "Cocktail",
+            "id": "Cocktail"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pizza-01",
+        "titulo": "Pizza 01",
+        "imagen": "./img/pizza/01.jpg",
+        "categoria": {
+            "nombre": "Pizza",
+            "id": "Pizza"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pizza-02",
+        "titulo": "Pizza 02",
+        "imagen": "./img/pizza/02.jpg",
+        "categoria": {
+            "nombre": "Pizza",
+            "id": "Pizza"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pizza-03",
+        "titulo": "CamiPizzaeta 03",
+        "imagen": "./img/pizza/03.jpg",
+        "categoria": {
+            "nombre": "Pizza",
+            "id": "Pizza"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Hamburguesa-01",
+        "titulo": "Hamburguesa 01",
+        "imagen": "./img/hamburguesa/01.jpg",
+        "categoria": {
+            "nombre": "Hamburguesa",
+            "id": "Hamburguesa"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Hamburguesa-02",
+        "titulo": "Hamburguesa 02",
+        "imagen": "./img/hamburguesa/02.jpg",
+        "categoria": {
+            "nombre": "Hamburguesa",
+            "id": "Hamburguesa"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Hamburguesa-03",
+        "titulo": "Hamburguesa 03",
+        "imagen": "./img/hamburguesa/03.jpg",
+        "categoria": {
+            "nombre": "Hamburguesa",
+            "id": "Hamburguesa"
+        },
+        "precio": 1000
+    } ]
