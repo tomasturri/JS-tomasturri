@@ -5,7 +5,7 @@
         "imagen": "./img/cocteles/01.jpg",
         "categoria": {
             "nombre": "Cocktail",
-            "id": "Cocktail"
+            "id": "cocktail"
         },
         "precio": 1000
     },
@@ -15,7 +15,7 @@
         "imagen": "./img/cocteles/02.jpg",
         "categoria": {
             "nombre": "Cocktail",
-            "id": "Cocktail"
+            "id": "cocktail"
         },
         "precio": 1000
     },
@@ -25,7 +25,7 @@
         "imagen": "./img/cocteles/03.jpg",
         "categoria": {
             "nombre": "Cocktail",
-            "id": "Cocktail"
+            "id": "cocktail"
         },
         "precio": 1000
     },
@@ -35,7 +35,7 @@
         "imagen": "./img/pizza/01.jpg",
         "categoria": {
             "nombre": "Pizza",
-            "id": "Pizza"
+            "id": "pizza"
         },
         "precio": 1000
     },
@@ -45,17 +45,17 @@
         "imagen": "./img/pizza/02.jpg",
         "categoria": {
             "nombre": "Pizza",
-            "id": "Pizza"
+            "id": "pizza"
         },
         "precio": 1000
     },
     {
         "id": "Pizza-03",
-        "titulo": "CamiPizzaeta 03",
+        "titulo": "Pizza 03",
         "imagen": "./img/pizza/03.jpg",
         "categoria": {
             "nombre": "Pizza",
-            "id": "Pizza"
+            "id": "pizza"
         },
         "precio": 1000
     },
@@ -65,7 +65,7 @@
         "imagen": "./img/hamburguesa/01.jpg",
         "categoria": {
             "nombre": "Hamburguesa",
-            "id": "Hamburguesa"
+            "id": "hamburguesa"
         },
         "precio": 1000
     },
@@ -75,7 +75,7 @@
         "imagen": "./img/hamburguesa/02.jpg",
         "categoria": {
             "nombre": "Hamburguesa",
-            "id": "Hamburguesa"
+            "id": "hamburguesa"
         },
         "precio": 1000
     },
@@ -85,7 +85,7 @@
         "imagen": "./img/hamburguesa/03.jpg",
         "categoria": {
             "nombre": "Hamburguesa",
-            "id": "Hamburguesa"
+            "id": "hamburguesa"
         },
         "precio": 1000
     } ]
