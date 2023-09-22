@@ -1,13 +1,13 @@
 [
     {
         "id": "cocktail-01",
-        "titulo": "Cóctel Martini",
+        "titulo": "Cóctel GIT Martini",
         "imagen": "./img/cocteles/01.jpg",
         "categoria": {
             "nombre": "Cocktail",
             "id": "cocktail"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "cocktail-02",
@@ -17,7 +17,7 @@
             "nombre": "Cocktail",
             "id": "cocktail"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "Cocktail-03",
@@ -27,7 +27,7 @@
             "nombre": "Cocktail",
             "id": "cocktail"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "Pizza-01",
@@ -37,7 +37,7 @@
             "nombre": "Pizza",
             "id": "pizza"
         },
-        "precio": 1000
+        "precio": 4500
     },
     {
         "id": "Pizza-02",
@@ -47,7 +47,7 @@
             "nombre": "Pizza",
             "id": "pizza"
         },
-        "precio": 1000
+        "precio": 5000
     },
     {
         "id": "Pizza-03",
@@ -57,7 +57,7 @@
             "nombre": "Pizza",
             "id": "pizza"
         },
-        "precio": 1000
+        "precio": 4000
     },
     {
         "id": "Hamburguesa-01",
@@ -67,7 +67,7 @@
             "nombre": "Hamburguesa",
             "id": "hamburguesa"
         },
-        "precio": 1000
+        "precio": 2500
     },
     {
         "id": "Hamburguesa-02",
@@ -77,7 +77,7 @@
             "nombre": "Hamburguesa",
             "id": "hamburguesa"
         },
-        "precio": 1000
+        "precio": 2800
     },
     {
         "id": "Hamburguesa-03",
@@ -87,5 +87,5 @@
             "nombre": "Hamburguesa",
             "id": "hamburguesa"
         },
-        "precio": 1000
+        "precio": 3000
     } ]
